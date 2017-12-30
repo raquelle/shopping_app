@@ -20,19 +20,24 @@ rake db:drop
 This did not change my source code but it did change the postgres database.
 This will be an almost empty commit, just the readme files will be updated.
 
-# To Do
-
-## Models
+## Define Models
 
 now I will make my models
 
 ```bash
 bundle exec rails g model item name:string price:integer sku:string
-
 bundle exec rails g model store name:string
-
 bundle exec rails g model list name:string
 ```
+
+If you cannot generate models because you have already created them then you will need to destroy the models
+```bash
+bundle exec rails d model item
+bundle exec rails d model list
+bundle exec rails d model store
+```
+
+# To Do
 
 ## Migrate
 

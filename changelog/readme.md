@@ -8,11 +8,19 @@ touch changelog/readme.md
 git add .gitignore
 git add *
 
-# To Do
-
 ## Make Database
+```bash
 bundle exec rake db:create
+```
+If database already exists then need to drop it before creating new.
 
+```bash
+rake db:drop
+```
+This did not change my source code but it did change the postgres database.
+This will be an almost empty commit, just the readme files will be updated.
+
+# To Do
 
 ## Models
 

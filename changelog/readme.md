@@ -142,7 +142,54 @@ irb(main):003:0>
 
 So that didn't work
 
+## Add Connections found in Example files
+
+Looked through the example files and noticed a difference in the change list migration file added in this code. I am not sure if I was supposed to add this text or if it was supposed to be created when I ran a migration file.
+
+```bash
+t.belongs_to :store, foreign_key: true
+```
+
+Also was missing a link in the items migration file. Where was this supposed to come from? Also I probably need to look up what a foreign_key is again.
+
+```bash
+ t.belongs_to :list, foreign_key: true
+```
+
+When comparing the example schema to my schema there were some expected difference but there was also a difference with the definition of index with both thel ists and items:
+
+```bash
+t.index ["store_id"], name: "index_lists_on_store_id"
+```
+
+```bash
+t.index ["list_id"], name: "index_items_on_list_id"
+```
+Now I will try to run migrate again with my additional text
+
+```bash
+    bundle exec rake db:migrate
+```
+## Add new Store in Rails Terminal
+
+Enter into the rails terminal
+
+```bash
+rails c
+```
+```rails
+Store.create(name: 'Amazon')
+```
+
+That seemed to work great.
+
 ### Create some Items
+Now let's try to create some Items again. Hoping since I added those connections and told my schema to hold onto the id that this will work.
+
+```rails
+List.create(name: 'Groceries', store_id: 1)
+```
+Nope, didn't work again. And all the store_id stuff that I added into my schema disappeared. Probably when I reran migrate. :(
 
 ### Check Deletion Properties
 

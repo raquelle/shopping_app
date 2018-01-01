@@ -98,7 +98,7 @@ That being said, a commit to git is not needed.
 
 tried to create list but could not need to add relationships
 
-##Add Relationships between List, Store, and Items
+### Add Relationships between List, Store, and Items
 
 ```app/models/list
 belongs_to :store

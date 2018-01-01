@@ -1,6 +1,6 @@
 ## Project
 
-``bash 
+```bash 
 rails new shopping_app -d postgresql
 cd shopping_app
 ```
@@ -190,6 +190,9 @@ Now let's try to create some Items again. Hoping since I added those connections
 List.create(name: 'Groceries', store_id: 1)
 ```
 Nope, didn't work again. And all the store_id stuff that I added into my schema disappeared. Probably when I reran migrate. :(
+
+## Drop Incorrect Models
+It seems that I cannot update my models by hand and need to drop my models to 
 
 ### Check Deletion Properties
 

@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  store: 
 
 two:
   name: MyString
+  store: 

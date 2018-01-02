@@ -2,6 +2,10 @@
 
 one:
   name: MyString
+  store: one
+  item: 
 
 two:
   name: MyString
+  store: two
+  item: 

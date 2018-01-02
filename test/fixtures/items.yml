@@ -4,8 +4,10 @@ one:
   name: MyString
   price: 1
   sku: MyString
+  list: one
 
 two:
   name: MyString
   price: 1
   sku: MyString
+  list: two
